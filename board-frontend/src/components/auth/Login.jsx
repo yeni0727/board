@@ -37,9 +37,9 @@ function Login() {
          )}
 
          <form onSubmit={handleLogin}>
-            <TextField label="이메일" name="email" fullWidth margin="normal" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <TextField label="이메일" name="email" fullWidth margin="normal" value={email} onChange={(e) => setEmail(e.target.value)} color="secondary" />
 
-            <TextField label="비밀번호" type="password" name="password" fullWidth margin="normal" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <TextField label="비밀번호" type="password" name="password" fullWidth margin="normal" value={password} onChange={(e) => setPassword(e.target.value)} color="secondary" />
 
             <Button variant="contained" color="secondary" type="submit" fullWidth disabled={loading} sx={{ position: 'relative', marginTop: '20px' }}>
                {loading ? (
