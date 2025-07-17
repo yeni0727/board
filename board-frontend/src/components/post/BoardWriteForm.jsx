@@ -40,7 +40,7 @@ function BoardWriteForm({ title, content, setTitle, setContent, handleSubmit }) 
          type: rawImageFile.type,
       })
 
-      // 상위 컴포넌트로 이미지와 함께 전달
+      // 상위 컴포넌트로 이미지랑 같이 전달
       handleSubmit(e, encodedFile)
    }
 

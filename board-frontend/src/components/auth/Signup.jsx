@@ -36,7 +36,7 @@ function Signup() {
          })
    }
 
-   //회원가입이 완료되었을때 보일 컴포넌트 (Redux store의 isSignupComplete 사용)
+   //회원가입이 완료되었을때 보일 컴포넌트 (isSignupComplete 사용)
    if (isSignupComplete) {
       return (
          <Container maxWidth="sm">

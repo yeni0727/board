@@ -20,7 +20,7 @@ module.exports = class Member extends Sequelize.Model {
          },
          {
             sequelize,
-            timestamps: true, //createAt, updateAt ..등 자동 생성
+            timestamps: true, //createAt, updateAt 자동 생성
             underscored: false,
             modelName: 'Member',
             tableName: 'member',

@@ -52,7 +52,6 @@ function BoardEditForm({ initialValues, onPostEdit, loading }) {
       let fileToSend = null
 
       if (imageChanged && rawImageFile) {
-         // 한글 파일명 인코딩
          fileToSend = new File([rawImageFile], encodeURIComponent(rawImageFile.name), {
             type: rawImageFile.type,
          })

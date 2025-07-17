@@ -21,7 +21,6 @@ module.exports = () => {
                if (exMember) {
                   const result = await bcrypt.compare(password, exMember.password)
                   if (result) {
-                     // 일치할때 사용자 객체를 passport에 반환
                      done(null, exMember)
                   } else {
                      done(null, false, { message: '비밀번호가 일치하지 않습니다' })
@@ -32,7 +31,7 @@ module.exports = () => {
                }
             } catch (error) {
                console.error('LocalStrategy error:', error)
-               done(error) // passport에 에러 객체 전달
+               done(error)
             }
          }
       )

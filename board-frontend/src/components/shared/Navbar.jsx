@@ -32,7 +32,6 @@ function Navbar({ isAuthenticated, member }) {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                <Link to="/">
                   <HomeIcon sx={{ color: pink[500] }} fontSize="large" />
-                  {/* <img src="/images/logo.png" alt="로고" width="160" style={{ display: 'inline-block', marginTop: '15px' }} /> */}
                </Link>
             </Typography>
             {isAuthenticated ? (
