@@ -136,7 +136,7 @@ function Home({ isAuthenticated, user }) {
          {/* 에러 상태 */}
          {error && (
             <div className="board-status-card board-error-card">
-               <Typography className="board-error-text">⚠️ 에러 발생: {error}</Typography>
+               <Typography className="board-error-text">⚠️ 에러: {error}</Typography>
             </div>
          )}
 
@@ -148,7 +148,7 @@ function Home({ isAuthenticated, user }) {
                      <Accordion key={post.id} className="board-accordion">
                         <AccordionSummary expandIcon={<ArrowDropDownIcon className="board-accordion-icon" />} aria-controls={`panel${post.id}-content`} id={`panel${post.id}-header`} className="board-accordion-summary">
                            <div className="board-accordion-content">
-                              <div className="board-post-number">#{index + 1 + (page - 1) * 10}</div>
+                              <div className="board-post-number">#{index + 1 + (page - 1) * 5}</div>
                               <Typography component="span" variant="h6" className="board-post-title">
                                  {post.title}
                               </Typography>
