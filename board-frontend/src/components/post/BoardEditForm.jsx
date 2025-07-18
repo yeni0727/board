@@ -8,13 +8,13 @@ function BoardEditForm({ initialValues, onPostEdit, loading }) {
    const [rawImageFile, setRawImageFile] = useState(null) // 원본 이미지 파일
    const [imageChanged, setImageChanged] = useState(false) //변경이미지(했을때)
 
-   // initialValues가 변경될 때 폼 데이터 설정
+   // initialValues가 변경될 때 폼데이터
    useEffect(() => {
       if (initialValues) {
          setTitle(initialValues.title || '')
          setContent(initialValues.content || '')
 
-         // 기존 이미지가 있다면 미리보기로 설정
+         // 기존 이미지가 있다면 미리보기
          if (initialValues.img) {
             setPreviewUrl(`${import.meta.env.VITE_APP_API_URL}/uploads/${initialValues.img}`)
          }
@@ -57,17 +57,16 @@ function BoardEditForm({ initialValues, onPostEdit, loading }) {
          })
       }
 
-      // 수정된 데이터 구성
+      // 수정된 데이터
       const postData = {
          title,
          content,
          imageFile: fileToSend,
          imageChanged,
-         // 기존 이미지 URL 유지 (이미지가 변경되지 않은 경우)
+         // 기존 이미지 유지 (이미지가 변경되지 않은 경우)
          imageUrl: !imageChanged ? initialValues?.imageUrl : null,
       }
 
-      // 상위 컴포넌트로 전달
       onPostEdit(postData)
    }
 

@@ -30,7 +30,7 @@ function BoardItem({ post }) {
       <Card style={{ margin: '20px 0' }}>
          {post.img && <CardMedia sx={{ height: 400, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center' }} image={`${import.meta.env.VITE_APP_API_URL}/uploads/${post.img}`} title={post.title} />}
          <CardContent>
-            {/* 작성자 정보 - Member 모델 기준 */}
+            {/* 작성자 정보*/}
             <Link to={`/my/${post.Member.id}`} style={{ textDecoration: 'none' }}>
                <Typography sx={{ color: 'primary.main' }}>@{post.Member.name}</Typography>
             </Link>

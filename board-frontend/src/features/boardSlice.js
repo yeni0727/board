@@ -70,7 +70,7 @@ const boardSlice = createSlice({
       pagination: null, // 페이징 객체
       loading: false,
       error: null,
-      // 수정 관련 상태 분리
+      // 수정~ 상태 분리
       updateLoading: false,
       updateError: null,
    },
@@ -78,7 +78,7 @@ const boardSlice = createSlice({
       resetWriteState: (state) => {
          state.loading = false
          state.error = null
-         // post는 리셋하지 않음 (수정 페이지에서 사용 중일 수 있음)
+         // post는 리셋하지 않음 (수정 페이지에서 사용 중일 수도있기때문)
       },
       clearPost: (state) => {
          state.post = null
@@ -94,7 +94,6 @@ const boardSlice = createSlice({
          .addCase(writePost.fulfilled, (state, action) => {
             state.loading = false
             state.post = action.payload
-            // post 상태를 변경하지 않음
          })
          .addCase(writePost.rejected, (state, action) => {
             state.loading = false
