@@ -178,7 +178,7 @@ function Home({ isAuthenticated, user }) {
                         게시물이 없습니다
                      </Typography>
                      <Typography variant="body2" className="board-status-subtitle">
-                        첫 번째 게시물을 작성해보세요!
+                        첫 번째 게시물을 작성해보세요
                      </Typography>
                   </div>
                </div>
